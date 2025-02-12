@@ -12,10 +12,11 @@ class Matriz:
         self.matriz = [[0 for j in range(self.columnas)] for i in range(self.filas)]
 
     def llenar_matriz(self):
-        # Método para llenar la matriz con valores ingresados por el usuario
+        import random
         for i in range(self.filas):
             for j in range(self.columnas):
-                self.matriz[i][j] = int(input(f"Ingrese el valor para la posición [{i}][{j}]: "))
+                # Generamos un número aleatorio entre 1 y 100
+                self.matriz[i][j] = random.randint(1, 100)
 
     def mostrar_matriz(self):
         # Método para mostrar la matriz
